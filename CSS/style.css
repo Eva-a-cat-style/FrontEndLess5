@@ -82,3 +82,124 @@
     max-width: 400px;
     text-align: center;
 }
+
+/*Home Page*/
+
+body {
+    font-family: Cera-Pro, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3D3D3D;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    border-bottom: 3px solid #46A358;
+}
+
+.logout-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+}
+
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #46A358;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+    background-color: #f9f9f9;
+    font-weight: 900;
+}
+
+
+.hero-text h1 {
+    font-size: 70px;
+    margin: 20px 0;
+}
+
+.hero-text h1 span {
+    color: #46A358;
+}
+
+.hero-text .description {
+    font-size: 14px;
+    color: #3D3D3D;
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+.shop-btn {
+    background-color: #46A358;
+;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.plants-container {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.plant-image.large {
+height: 350px;
+}
+
+.plant-image.small {
+    width: 100px;
+    margin-right: -140px;
+    transform: translateY(-18px);
+}

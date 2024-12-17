@@ -117,6 +117,7 @@ hr {
     textarea {
         overflow: auto;
     }
+
     [type="checkbox"],
     [type="radio"] {
         box-sizing: border-box;
