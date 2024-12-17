@@ -86,7 +86,7 @@
 /*Home Page*/
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Cera-Pro, sans-serif;
     background-color: #ffffff;
     color: #333;
 }
@@ -127,12 +127,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #3D3D3D;
     font-weight: bold;
 }
 
 nav ul li a.active {
-    border-bottom: 2px solid #4CAF50;
+    border-bottom: 3px solid #46A358;
 }
 
 .logout-icon {
@@ -145,7 +145,7 @@ nav ul li a.active {
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #46A358;
     color: white;
     border: none;
     font-size: 16px;
@@ -157,30 +157,29 @@ nav ul li a.active {
     align-items: center;
     padding: 50px 100px;
     background-color: #f9f9f9;
-    font-weight: 1000;
+    font-weight: 900;
 }
 
-.hero-text {
-    max-width: 50%;
-}
 
 .hero-text h1 {
-    font-size: 48px;
+    font-size: 70px;
     margin: 20px 0;
 }
 
 .hero-text h1 span {
-    color: #4CAF50;
+    color: #46A358;
 }
 
 .hero-text .description {
-    font-size: 16px;
-    color: #777;
-    margin-bottom: 20px;
+    font-size: 14px;
+    color: #3D3D3D;
+    margin-bottom: 24px;
+    font-weight: 400;
 }
 
 .shop-btn {
-    background-color: #4CAF50;
+    background-color: #46A358;
+;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
