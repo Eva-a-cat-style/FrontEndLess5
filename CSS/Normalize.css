@@ -94,6 +94,8 @@ hr {
         border-style: none;
         padding: 0;
     }
+
+
     button:-moz-focusring,
     [type="button"]:-moz-focusring,
     [type="reset"]:-moz-focusring,

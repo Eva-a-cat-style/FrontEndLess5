@@ -1,3 +1,27 @@
+@font-face{
+    font-family: 'Cera Pro Regular';
+    src: url('fonts/CeraPro-Regular.eot') format('truetype');
+    src: url('fonts/CeraPro-Regular.ttf') format('truetype');
+    src: url('fonts/CeraPro-Regular.woff')  format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Cera Pro Medium';
+    src: url('fonts/CeraPro-Medium.eot') format('truetype');
+    src: url('fonts/CeraPro-Medium.ttf') format('truetype');
+    src: url('fonts/CeraPro-Medium.woff')  format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Cera Pro Bold';
+    src: url('fonts/CeraPro-Bold.eot') format('truetype');
+    src: url('fonts/CeraPro-Bold.ttf') format('truetype');
+    src: url('fonts/CeraPro-Bold.woff')  format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 .body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -84,6 +108,9 @@
 }
 
 /*Home Page*/
+main{
+    padding: 50px 120px 52px;
+}
 
 body {
     font-family: Cera-Pro, sans-serif;
@@ -93,14 +120,15 @@ body {
 
 header {
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
+    border-bottom: 1px solid rgba(70, 163, 0, 0.05);
+    padding-bottom: 25px;
 }
 
-.navbar {
+.main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 8px;
 }
 
 .logo {
@@ -121,18 +149,20 @@ nav ul {
     display: flex;
 }
 
-nav ul li {
-    margin-right: 20px;
-}
-
 nav ul li a {
     text-decoration: none;
     color: #3D3D3D;
-    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Cera Pro Regular', serif;
+    border-bottom: 3px solid transparent;
+    padding: 25px;
 }
 
 nav ul li a.active {
     border-bottom: 3px solid #46A358;
+    font-family: 'Cera Pro Bold', serif;
+    padding: 25px;
+    font-weight: bold;
 }
 
 .logout-icon {
@@ -144,11 +174,14 @@ nav ul li a.active {
 .login-btn {
     display: inline-flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 7px 17px;
     background-color: #46A358;
-    color: white;
+    color: #fff;
     border: none;
     font-size: 16px;
+    border-radius: 6px;
+    gap: 4px;
+    font-family: 'Cera Pro Medium', serif;
 }
 
 .hero {
