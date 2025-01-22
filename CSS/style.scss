@@ -1,0 +1,394 @@
+@mixin flex($direction: null, $justify: null, $align: null) {
+    display: flex;
+
+    @if $direction != null {
+        flex-direction: $direction;
+    }
+
+    @if $justify != null {
+        justify-content: $justify;
+    }
+
+    @if $align != null {
+        align-items: $align;
+    }
+}
+
+@mixin font-face($family) {
+    @font-face {
+        font-family: 'Cera Pro #{$family}';
+        src: url('../fonts/CeraPro-#{$family}.ttf') format('ttf'),
+        url('../fonts/CeraPro-#{$family}.woff') format('woff');
+
+        @if $family == Regular {
+            font-weight: 400;
+        } @else if $family == Medium {
+        font-weight: 550;
+    } @else {
+        font-weight: 700;
+    }
+    }
+}
+
+@mixin font(
+$family,
+$weight: null,
+$size: null,
+$lineHeight: null,
+$letterSpacing: null,
+$style: null
+) {
+    font-family: 'Cera Pro #{$family}';
+
+    @if $weight != null {
+        font-weight: $weight;
+    }
+
+    @if $size != null {
+        font-size: $size;
+    }
+
+    @if $lineHeight != null {
+        line-height: $lineHeight;
+    }
+
+    @if $letterSpacing != null {
+        letter-spacing: $letterSpacing;
+    }
+
+    @if $style != null {
+        font-style: $style;
+    }
+}
+
+// ----- MIXIN end -----
+
+@include font-face(Regular);
+@include font-face(Medium);
+@include font-face(Bold);
+
+/* ----- CSS RESET start ------ */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    @include font(Regular);
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+    ::before,
+    ::after {
+        content: '';
+        content: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* ----- CSS RESET end ------ */
+
+.container {
+    @include flex(column);
+    padding: 30px 120px 52px 120px;
+    gap: 12px;
+}
+
+.header {
+    @include flex(row, space-between);
+    height: 53px;
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+
+    &Nav {
+        .list {
+            @include flex(null, space-between);
+            gap: 40px;
+            height: 100%;
+
+            &Item {
+                border-bottom: 3px solid;
+                border-color: transparent;
+                margin-top: 8px;
+            }
+            &Item:hover {
+                border-bottom: 3px solid;
+                border-color: #46a358;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &LoginButton {
+        @include flex(null, center);
+        gap: 5px;
+        padding: 8px 17px;
+        border: none;
+        border-radius: 6px;
+        background-color: #46a358;
+        color: white;
+    }
+}
+
+.banner {
+    @include flex(row, space-between);
+    background-color: #f5f5f580;
+    gap: 3%;
+    margin-bottom: 46px;
+
+    &Text {
+        @include flex(column, center);
+        margin-left: 40px;
+
+        .tagline,
+        .mainMessage {
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            color: #3d3d3d;
+            @include font(Medium, 500, 14px, 16px, 1.4px);
+            margin-bottom: 7px;
+        }
+
+        .mainMessage {
+            @include font(Bold, 900, 70px, 70px);
+            margin-bottom: 5px;
+
+            .highlight {
+                @include font(Bold, 900, 70px, 70px);
+                color: #46a358;
+            }
+        }
+
+        .description {
+            color: #727272;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            margin-bottom: 44px;
+        }
+
+        .cta {
+            .button {
+                @include flex(null, center);
+                gap: 5px;
+                padding: 10px 25px;
+                border: none;
+                border-radius: 6px;
+                background-color: #46a358;
+                color: white;
+                @include font(Bold);
+            }
+        }
+    }
+}
+
+.shop {
+    @include flex(row);
+    gap: 50px;
+
+    .categories {
+        @include flex(column, space-between);
+        background: #fbfbfb;
+
+        &Nav {
+            @include flex(column);
+            padding: 14px 0px 0px 18px;
+            @include font(Bold);
+
+            .headline {
+                @include font(Bold);
+                margin-bottom: 7px;
+            }
+
+            .list {
+                @include flex(column);
+                margin-left: 12px;
+
+                &Item {
+                    line-height: 40px;
+
+                    &:hover {
+                        color: #46a358;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        &Ad {
+            @include flex(column);
+            .image {
+                img {
+                    background: linear-gradient(
+                            180deg,
+                            rgba(70, 163, 88, 0.1) 0%,
+                            rgba(70, 163, 88, 0.03) 100%
+                    );
+                }
+            }
+        }
+    }
+    .product {
+        @include flex(column);
+
+        &Nav {
+            @include flex(row, space-between);
+            margin-bottom: 31px;
+
+            .filters {
+                @include flex(row);
+                gap: 37px;
+
+                .listItem {
+                    padding-bottom: 7px;
+                    border-bottom: 2px solid transparent;
+
+                    &:hover {
+                        color: #46a358;
+                        cursor: pointer;
+                    }
+
+                    &:active {
+                        color: #46a358;
+                        border-bottom: 2px solid #46a358;
+                    }
+
+                    &:first-child {
+                        color: #46a358;
+                        @include font(Bold, 700, 15px, 16px, null, normal);
+                        border-bottom: 2px solid #46a358;
+                    }
+                }
+            }
+
+            .sort {
+                @include flex(row);
+                align-items: center;
+
+                &Selector {
+                    @include flex();
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    span {
+                        padding: 0px 5px 0px 8px;
+                        @include font(Regular, 400, 16px);
+                    }
+
+                    img {
+                        @include flex(null, center, center);
+                        width: 16px;
+                        height: 16px;
+                        background-color: transparent;
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+
+        &Listing {
+            margin-bottom: 90px;
+
+            .cards {
+                @include flex(row, space-between);
+                flex-wrap: wrap;
+                row-gap: 70px;
+
+                .card {
+                    @include flex(column);
+
+                    .image {
+                        @include flex(null, center, center);
+                        max-height: 300px;
+                        max-width: 258px;
+                        background-color: #fbfbfb;
+                        margin-bottom: 12px;
+                        padding: 12% 3%;
+
+                        img {
+                            max-width: 250px;
+                            mix-blend-mode: multiply;
+                        }
+                    }
+
+                    .description {
+                        @include flex(column);
+                        gap: 6px;
+
+                        .name {
+                            color: #3d3d3d;
+                            @include font(Regular, 400, 16px, 16px, normal);
+                        }
+
+                        .price {
+                            color: #46a358;
+                            font-family: 'Cera Pro Bold';
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 16px;
+
+                            &::before {
+                                content: '$';
+                            }
+
+                            &::after {
+                                content: '.00';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &PageNav {
+            .pages {
+                @include flex(row, end, null);
+                gap: 10px;
+
+                .page {
+                    padding: 10px 12px;
+                    border-radius: 4px;
+                    border: 1px solid #e5e5e5;
+
+                    &:first-child {
+                        background-color: #46a358;
+                        color: #fff;
+                        font-weight: 700;
+                        font-family: 'Cera Pro Bold';
+                    }
+
+                    &:active {
+                        background-color: #46a358;
+                        color: #fff;
+                        border: transparent;
+                    }
+
+                    &:not(:first-child, :active):hover {
+                        border: 1px solid #46a358;
+                        color: #46a358;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
