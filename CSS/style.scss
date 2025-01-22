@@ -23,20 +23,20 @@
         @if $family == Regular {
             font-weight: 400;
         } @else if $family == Medium {
-        font-weight: 550;
-    } @else {
-        font-weight: 700;
-    }
+            font-weight: 550;
+        } @else {
+            font-weight: 700;
+        }
     }
 }
 
 @mixin font(
-$family,
-$weight: null,
-$size: null,
-$lineHeight: null,
-$letterSpacing: null,
-$style: null
+    $family,
+    $weight: null,
+    $size: null,
+    $lineHeight: null,
+    $letterSpacing: null,
+    $style: null
 ) {
     font-family: 'Cera Pro #{$family}';
 
@@ -203,6 +203,7 @@ table {
 .shop {
     @include flex(row);
     gap: 50px;
+    margin-bottom: 94px;
 
     .categories {
         @include flex(column, space-between);
@@ -238,9 +239,9 @@ table {
             .image {
                 img {
                     background: linear-gradient(
-                            180deg,
-                            rgba(70, 163, 88, 0.1) 0%,
-                            rgba(70, 163, 88, 0.03) 100%
+                                    180deg,
+                                    rgba(70, 163, 88, 0.1) 0%,
+                                    rgba(70, 163, 88, 0.03) 100%
                     );
                 }
             }
@@ -391,4 +392,150 @@ table {
             }
         }
     }
+}
+
+.findMore {
+    @include flex(row);
+    gap: 5%;
+    margin-bottom: 7%;
+
+    &Banner {
+        @include flex(row);
+        position: relative;
+
+        img {
+            max-width: 292px;
+            max-height: 292px;
+            position: absolute;
+            z-index: 1;
+            mix-blend-mode: multiply;
+            bottom: 10px;
+        }
+
+        .text {
+            @include flex(column);
+            justify-content: center;
+            align-items: flex-end;
+            background-color: #fbfbfb;
+            max-height: 302px;
+            padding: 50px 30px 50px calc(250px - (250px * 0.03));
+            margin-top: 52px;
+
+            h4 {
+                margin-bottom: 9px;
+                color: #3d3d3d;
+                @include font(Bold, 900, 18px, 24px);
+                text-transform: uppercase;
+                padding-left: 40%;
+                text-align: right;
+            }
+
+            p {
+                text-align: end;
+                margin-bottom: 25px;
+                color: #727272;
+                @include font(Regular, 400, 14px, 24px);
+            }
+
+            .cta {
+                gap: 2px;
+                padding: 11px 27px;
+                border-radius: 6px;
+                background: #46a358;
+                color: #fff;
+                @include font(Medium, 500, 14px, 20px);
+            }
+        }
+    }
+}
+
+.blog {
+    @include flex(column);
+    gap: 35px;
+
+    &Header {
+        @include flex(column, null);
+        align-items: center;
+        gap: 15px;
+
+        h3 {
+            color: #3d3d3d;
+            @include font(Bold, 700, 30px, 16px, null, normal);
+        }
+
+        p {
+            color: #727272;
+            @include font(Regular, 400, 14px, 24px, null, normal);
+        }
+    }
+
+    &Articles {
+        @include flex(row, space-between);
+
+        a {
+            text-decoration: none;
+            article {
+                max-width: 268px;
+
+                img {
+                    max-width: inherit;
+                }
+
+                .text {
+                    @include flex(column);
+                    padding: 9px 15px 13px 15px;
+                    gap: 4px;
+                    background-color: #fbfbfb;
+
+                    .metaInfo {
+                        color: #46a358;
+                        @include font(Medium, 500, 14px, 16px);
+
+                        span {
+                            @include font(Bold, 700);
+                        }
+                    }
+
+                    h5 {
+                        @include font(Bold, 700, 20px, 130%);
+                        color: #3d3d3d;
+                        padding-right: 26px;
+                    }
+
+                    .description {
+                        @include font(Regular, 400, 14px, 22px);
+                        color: #727272;
+                        margin-bottom: 10px;
+                    }
+
+                    button {
+                        @include flex(row, flex-start, center);
+                        @include font(Medium, 500, 14px, 16px);
+                        background-color: transparent;
+                        gap: 3px;
+
+                        svg {
+                            @include flex(row, center, center);
+                            margin-top: 3px;
+                            fill: #3d3d3d;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                .text {
+                    button {
+                        @include font(Medium);
+                        color: #46a358;
+
+                        svg {
+                            fill: #46a358;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
