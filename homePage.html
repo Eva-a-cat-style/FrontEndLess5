@@ -1,45 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="CSS/Reset.css">
-<link rel="stylesheet" href="CSS/Normalize.css">
-<link rel="stylesheet" href="CSS/style.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+  />
+  <link rel="stylesheet" href="./CSS/style.css"/>
+  <title>Document</title>
+</head>
 <body>
-<header>
-  <div class="main">
-    <div class="logo">
-      <img src="Images/LogoImg.png" alt="Greenshop Logo">
+<div class="container">
+  <header class="header">
+    <div class="headerLogo">
+      <img src="Images/Logo%20Img.png" alt="Logo"
+      />
     </div>
-    <nav>
-      <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Plant Care</a></li>
-        <li><a href="#">Blogs</a></li>
-      </ul>
-    </nav>
+<nav class="headerNav">
+  <ul class="list">
 
-    <button class="login-btn">
-      <img src="Images/LogoutImg.png" alt="Logout" class="logout-icon">Login
+  <li class="listItem">
+    Home
+  </li>
+   <li class="listItem">
+      Shop
+   </li>
+   <li class="listItem">
+     Plant Care
+   </li>
+   <li class="listItem">
+     Blogs
+   </li>
+  </ul>
+</nav>
+
+  <div class="headerLogin">
+    <button type="button" class="headerLoginButton">
+        <a href="/registration.html">
+      <img src="Images/Logout%20Img.png" alt="Logout ico"/>
+      Login
+        </a>
     </button>
   </div>
-</header>
+  </header>
 
-<main>
-  <section class="hero">
-    <div class="hero-text">
-      <p>WELCOME TO GREENSHOP</p>
-      <h1>LET'S MAKE A <br>BETTER <span> PLANET</span></h1>
-      <p class="description">
-        We are an online plant shop offering a wide range of cheap and trendy plants. Use <br>
-        our plants to create a unique Urban Jungle. Order your favorite plants!
-      </p>
-      <button class="shop-btn">SHOP NOW</button>
+  <main class="main">
+<section class="banner">
+  <div class="bannerText">
+    <h5 class="tagline">Welcome to GreenShop</h5>
+    <h2 class="mainMessage">
+      Let’s Make a Better
+      <span class="highlight">Planet</span>
+    </h2>
+    <p class="description">
+          We are an online plant shop offering a wide range of cheap and trendy
+          plants. Use our plants to create an unique Urban Jungle. Order your
+          favorite plants!
+    </p>
+<div class="cta">
+  <button type="button" class="button">
+    SHOP NOW
+  </button>
     </div>
-    <div class="plants-container">
-      <img src="Images/PlantImg.png" alt="small Plant" class="plant-image small">
-      <img src="Images/PlantImg.png" alt="large Plant" class="plant-image large">
-    </div>
-  </section>
-</main>
+  </div>
+
+  <img class="bannerImage" src="Images/Plant%20Img.png" alt="Plants images"/>
+
+    </section>
+<section class="shop">
+  <aside class="categories">
+    <nav class="categoriesNav">
+     <span class="headline">Categories</span>
+      <ul class="list">
+      <li class="listItem">
+              House Plants
+            </li>
+      <li class="listItem">
+              Potter Plants
+            </li>
+      <li class="listItem">
+              Seeds
+            </li>
+      <li class="listItem">
+              Small Plants
+            </li>
+      <li class="listItem">
+              Big Plants
+            </li>
+      <li class="listItem">
+              Succulents
+            </li>
+      <li class="listItem">
+              Trerrariums
+            </li>
+      <li class="listItem">
+              Gardening
+            </li>
+      <li class="listItem">
+              Accessories
+            </li>
+          </ul>
+        </nav>
+  <div class="categoriesAd">
+    <a href="" class="image">
+            <img role="button" src="./Images/Super Sale Banner.png" alt="Super Sale Banner"/>
+          </a>
+        </div>
+      </aside>
+
+<section class="product">
+  <nav class="productNav">
+    <ul class="filters">
+      <li class="listItem">
+              All Plants
+      </li>
+      <li class="listItem">
+              New Arrivals
+      </li>
+      <li class="listItem">
+              Sale
+      </li>
+          </ul>
+  <div class="sort">
+    <span>Sort by:</span>
+    <button class="sortSelector" type="button">
+              <span>Default sorting</span>
+
+              <img src="./Images/Arrow%20-%20Down%202.png" alt="arrow down icon"/>
+
+            </button>
+          </div>
+        </nav>
+ <div class="productListing">
+   <ul class="cards">
+     <li class="card">
+       <a href="">
+         <div class="image">
+           <img src="./Images/Barberton Daisy.png" alt="Barberton Daisy plant image"/>
+         </div>
+
+  <div class="description">
+    <span class="name">Barberton Daisy</span>
+    <span class="price">199</span>
+  </div>
+       </a>
+     </li>
+
+     <li class="card">
+       <a href="">
+         <div class="image">
+                  <img src="./Images/Angel Wing Begonia.png" alt="Angel Wing Begonia plant image"/>
+                </div>
+
+  <div class="description">
+    <span class="name">Angel Wing Begonia</span>
+    <span class="price">169</span>
+  </div>
+       </a>
+     </li>
+
+     <li class="card">
+       <a href="">
+         <div class="image">
+           <img src="./Images/African Violet.png" alt="African Violet plant image"/>
+                </div>
+
+ <div class="description">
+   <span class="name">African Violet</span>
+   <span class="price">199</span>
+ </div>
+       </a>
+     </li>
+
+ <li class="card">
+   <a href="">
+     <div class="image">
+       <img id="spiderLily" src="./Images/Beach Spider Lily.png" alt="Beach Spider Lily plant image"/>
+                </div>
+
+ <div class="description">
+   <span class="name">Beach Spider Lily</span>
+   <span class="price">129</span>
+ </div>
+   </a>
+ </li>
+
+  <li class="card">
+    <a href="">
+      <div class="image">
+        <img src="./Images/Blushing Bromeliad.png" alt="Blushing Bromeliad plant image"/>
+                </div>
+
+  <div class="description">
+    <span class="name">Blushing Bromeliad</span>
+    <span class="price">139</span>
+  </div>
+    </a>
+  </li>
+
+  <li class="card">
+    <a href="">
+      <div class="image">
+        <img src="./Images/Aluminum Plant.png" alt="African Violet plant image"/>
+      </div>
+
+      <div class="description">
+        <span class="name">Aluminum Plant</span>
+        <span class="price">179</span>
+      </div>
+    </a>
+  </li>
+
+  <li class="card">
+    <a href="">
+      <div class="image">
+        <img src="./Images/Bird's Nest Fern.png" alt="Barberton Daisy plant image"/>
+      </div>
+
+<div class="description">
+  <span class="name">Bird's Nest Fern</span>
+  <span class="price">99</span>
+</div>
+    </a>
+  </li>
+
+  <li class="card">
+    <a href="">
+      <div class="image">
+        <img src="./Images/Broadleaf Lady Palm.png" alt="Angel Wing Begonia plant image"/>
+      </div>
+
+   <div class="description">
+     <span class="name">Broadleaf Lady Palm</span>
+     <span class="price">59</span>
+   </div>
+    </a>
+  </li>
+
+  <li class="card">
+    <a href="">
+      <div class="image">
+        <img src="./Images/Chinese Evergreen.png" alt="African Violet plant image"/>
+      </div>
+
+  <div class="description">
+    <span class="name">Chinese Evergreen</span>
+    <span class="price">39</span>
+  </div>
+    </a>
+  </li>
+   </ul>
+ </div>
+
+<nav class="productPageNav">
+  <ul class="pages">
+    <li class="page" role="option">
+      1
+    </li>
+    <li class="page" role="option">
+      2
+    </li>
+    <li class="page" role="option">
+      3
+    </li>
+    <li class="page" role="option">
+      4
+    </li>
+    <li class="page" role="option">
+              <img src="Images/Arrow%20-%20Right%202.svg" alt="arrow right icon"/>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </section>
+  </main>
+</div>
 </body>
 </html>
