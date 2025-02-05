@@ -538,3 +538,190 @@ table {
     }
 
 }
+.footer {
+    @include flex(column);
+    background-color: #fbfbfb;
+    border-bottom: rgba(70, 163, 88, 0.2) solid 1px;
+
+    .about-us {
+        @include flex(row, null, center);
+        padding: 30px 25px;
+        gap: 5%;
+
+        .keypoints {
+            width: 70%;
+
+            &__list {
+                @include flex(row, space-between);
+            }
+
+            &__item {
+                padding: 0 3%;
+
+                &:not(:first-child, :last-child) {
+                    border-left: rgba(70, 163, 88, 0.1) solid 1px;
+                    border-right: rgba(70, 163, 88, 0.1) solid 1px;
+                }
+            }
+
+            &__image {
+                margin-bottom: 15px;
+            }
+
+            &__description {
+                @include flex(column);
+                gap: 9px;
+            }
+
+            &__title {
+                @include font(Cera, Bold, 700, 17px, 16px);
+                color: #3d3d3d;
+            }
+
+            &__paragraph {
+                @include font(Cera, Regular, 400, 14px, 22px);
+                color: #727272;
+            }
+        }
+
+        .news-subcribtion {
+            @include flex(column);
+            max-width: 354px;
+            gap: 18px;
+            $borderRadius: 6px;
+
+            &__title {
+                @include font(Cera, Bold, 700, 18px, 16px);
+                color: #3d3d3d;
+            }
+
+            &__form {
+                @include flex(row, space-between, center);
+            }
+
+            &__input {
+                border-radius: $borderRadius 0px 0px $borderRadius;
+                padding: 12px 0px 12px 11px;
+                width: 100%;
+                border-right: none;
+                background-color: #fff;
+                box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+            }
+
+            &__button {
+                padding: 12px 25px;
+                border-radius: 0px $borderRadius $borderRadius 0px;
+                background-color: #46a358;
+                color: #fff;
+                @include font(Cera, Bold, 700, 18px, 16px);
+                box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+                border: transparent solid 2px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #347a42;
+                }
+
+                &:active {
+                    background-color: #fff;
+                    color: #46a358;
+                    border: #46a358 solid 2px;
+                }
+            }
+
+            &__description {
+                @include font(Cera, Regular, 400, 13px, 22px);
+                color: #727272;
+            }
+        }
+    }
+
+    .contact-info {
+        @include flex(row, null, center);
+        @include backgroundGradient(#edf6ef 0%, #52c368 100%);
+        padding: 27px 25px;
+        gap: 5%;
+
+        &__logo {
+            width: 20%;
+        }
+
+        &__address {
+            width: 75%;
+        }
+
+        &__list {
+            @include flex(row, space-between, center);
+            gap: 5%;
+        }
+
+        &__item {
+            @include flex(row, null, center);
+            gap: 10px;
+        }
+
+        &__link {
+            width: 190px;
+            color: #3d3d3d;
+        }
+    }
+
+    .navigation {
+        @include flex(row);
+        padding: 33px 25px;
+        gap: 5%;
+
+        &__nav {
+            width: 70%;
+        }
+
+        &__list {
+            @include flex(row);
+            gap: 20%;
+        }
+
+        &__item {
+            @include flex(column);
+            gap: 15px;
+        }
+
+        &__header {
+            @include font(Cera, Bold, 700, 18px, 16px);
+        }
+
+        &__links {
+            @include flex(column, center);
+            gap: 10px;
+        }
+
+        &__link {
+            @include font(Cera, Regular, 400, 14px, 30px);
+            a {
+                color: #3d3d3d;
+            }
+        }
+
+        .media-and-payment {
+            width: 35%;
+            &__title {
+                @include font(Cera, Bold, 700, 18px, 16px);
+                color: #3d3d3d;
+                margin-bottom: 20px;
+            }
+
+            &__ul {
+                @include flex(row);
+                gap: 10px;
+                margin-bottom: 33px;
+            }
+
+            &__img {
+                max-width: 224px;
+            }
+        }
+    }
+}
+
+.copyrights {
+    @include flex(null, center, center);
+}
