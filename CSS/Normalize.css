@@ -84,6 +84,7 @@ hr {
     button,
     [type="button"],
     [type="reset"],
+
     [type="submit"] {
         -webkit-appearance: button;
     }
@@ -94,12 +95,15 @@ hr {
         border-style: none;
         padding: 0;
     }
+
+
     button:-moz-focusring,
     [type="button"]:-moz-focusring,
     [type="reset"]:-moz-focusring,
     [type="submit"]:-moz-focusring {
         outline: 1px dotted ButtonText;
     }
+
     fieldset {
         padding: 0.35em 0.75em 0.625em;
     }
@@ -117,6 +121,7 @@ hr {
     textarea {
         overflow: auto;
     }
+
     [type="checkbox"],
     [type="radio"] {
         box-sizing: border-box;

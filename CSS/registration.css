@@ -1,0 +1,209 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "Cera Pro Regular";
+    src: url("../fonts/CeraPro/CeraPro-Regular.ttf") format("truetype"), url("../fonts/CeraPro/CeraPro-Regular.woff") format("woff");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Cera Pro Medium";
+    src: url("../fonts/CeraPro/CeraPro-Medium.ttf") format("truetype"), url("../fonts/CeraPro/CeraPro-Medium.woff") format("woff");
+    font-weight: 550;
+}
+@font-face {
+    font-family: "Cera Pro Bold";
+    src: url("../fonts/CeraPro/CeraPro-Bold.ttf") format("truetype"), url("../fonts/CeraPro/CeraPro-Bold.woff") format("woff");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Encode Sans Expanded Light";
+    src: url("../fonts/EncodeSansExpanded/EncodeSansExpanded-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Encode Sans Expanded Medium";
+    src: url("../fonts/EncodeSansExpanded/EncodeSansExpanded-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "icons-pack";
+    src: url("../fonts/icons/icons-pack.ttf") format("truetype"), url("../fonts/icons/icons-pack.woff") format("woff"), url("../fonts/icons/icons-pack.woff2") format("woff2");
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Cera Pro Regular";
+}
+
+body {
+    line-height: 1;
+}
+
+a {
+    color: inherit;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+.icon .path {
+    fill: #000;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+blockquote ::before,
+blockquote ::after,
+q ::before,
+q ::after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ----- CSS RESET end ------ */
+body {
+    background-color: #dff9e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Забезпечує повну висоту екрану */
+}
+
+.content {
+    min-width: 500px;
+    min-height: 656px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.close {
+    display: flex;
+    justify-content: end;
+    padding: 13px 13px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+}
+.close__icon {
+    cursor: pointer;
+}
+.close__icon > path {
+    fill: #3d3d3d;
+}
+.close__icon:hover > path {
+    fill: #46a358;
+}
+
+.main {
+    padding: 50px 100px;
+}
+
+.form-select__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+.form-select__item :nth-of-type(odd) {
+    font-family: "Cera Pro Medium";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 16px;
+    color: #3d3d3d;
+}
+.form-select__item :nth-of-type(odd):hover {
+    color: #46a358;
+}
+
+.register {
+    margin-bottom: 36px;
+}
+.register__help {
+    font-family: "Cera Pro Regular";
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+}
+.register__form {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.register__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 41px;
+}
+.register__input {
+    width: 100%;
+    padding: 12px 0px 12px 14px;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+}
+.register__button {
+    cursor: pointer;
+    font-family: "Cera Pro Bold";
+    font-weight: 700;
+    background-color: #46a358;
+    color: #fff;
+    padding: 13px 0;
+    border-radius: 5px;
+}
+
+.register-with__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 27px;
+}
+.register-with__title > span {
+    margin: 0px 6px;
+}
+.register-with__title > div {
+    height: 2px;
+    flex: 1;
+    background-color: #eaeaea;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+.button-group__button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    width: 100%;
+    padding: 12px 0px 12px 14px;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+    background-color: transparent;
+}

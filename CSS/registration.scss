@@ -1,0 +1,273 @@
+@mixin flex($direction: null, $justify: null, $align: null) {
+    display: flex;
+
+@if $direction != null {
+        flex-direction: $direction;
+    }
+
+@if $justify != null {
+        justify-content: $justify;
+    }
+
+@if $align != null {
+        align-items: $align;
+    }
+}
+
+@mixin font-face($face, $family: null) {
+@font-face {
+    @if $face == Cera {
+            font-family: 'Cera Pro #{$family}';
+            src: url('../fonts/CeraPro/CeraPro-#{$family}.ttf') format('truetype'),
+                url('../fonts/CeraPro/CeraPro-#{$family}.woff') format('woff');
+
+        @if $family == Regular {
+                font-weight: 400;
+            } @else if $family == Medium {
+                font-weight: 550;
+            } @else {
+                font-weight: 700;
+            }
+        } @else if $face == Encode {
+            font-family: 'Encode Sans Expanded #{$family}';
+            src: url('../fonts/EncodeSansExpanded/EncodeSansExpanded-#{$family}.ttf')
+            format('truetype');
+        } @else if $face == Icons {
+            font-family: 'icons-pack';
+            src: url('../fonts/icons/icons-pack.ttf') format('truetype'),
+                url('../fonts/icons/icons-pack.woff') format('woff'),
+                url('../fonts/icons/icons-pack.woff2') format('woff2');
+        }
+    }
+}
+
+@mixin font(
+    $face,
+    $family: null,
+    $weight: null,
+    $size: null,
+    $lineHeight: null,
+    $letterSpacing: null,
+    $style: null
+) {
+@if $face == Cera {
+        font-family: 'Cera Pro #{$family}';
+    } @else if $face == Encode {
+        font-family: 'Encode Sans Expanded #{$family}';
+    }
+
+@if $weight != null {
+        font-weight: $weight;
+    }
+
+@if $size != null {
+        font-size: $size;
+    }
+
+@if $lineHeight != null {
+        line-height: $lineHeight;
+    }
+
+@if $letterSpacing != null {
+        letter-spacing: $letterSpacing;
+    }
+
+@if $style != null {
+        font-style: $style;
+    }
+}
+
+@mixin backgroundGradient($colorA, $colorB) {
+    background: -webkit-linear-gradient(to right, $colorA, $colorB);
+    background: -moz-linear-gradient(to right, $colorA, $colorB);
+    background: -o-linear-gradient(to right, $colorA, $colorB);
+    background: linear-gradient(to right, $colorA, $colorB);
+}
+
+// ----- MIXIN end -----
+
+@include font-face(Cera, Regular);
+@include font-face(Cera, Medium);
+@include font-face(Cera, Bold);
+@include font-face(Encode, Light);
+@include font-face(Encode, Medium);
+@include font-face(Icons);
+
+/* ----- CSS RESET start ------ */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+@include font(Cera, Regular);
+}
+
+body {
+    line-height: 1;
+}
+
+a {
+    color: inherit;
+}
+
+ol,
+    ul {
+    list-style: none;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+
+.path {
+        fill: #000;
+    }
+}
+
+blockquote,
+    q {
+    quotes: none;
+    ::before,
+        ::after {
+        content: '';
+        content: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* ----- CSS RESET end ------ */
+
+body {
+    background-color: #dff9e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Забезпечує повну висоту екрану */
+}
+
+.content {
+    min-width: 500px;
+    min-height: 656px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.close {
+@include flex(null, end);
+    padding: 13px 13px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+
+&__icon {
+        cursor: pointer;
+
+    & > path {
+            fill: #3d3d3d;
+        }
+
+    &:hover > path {
+            fill: #46a358;
+        }
+    }
+}
+
+.main {
+    padding: 50px 100px;
+}
+
+.form-select {
+&__list {
+    @include flex(row, center, center);
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+
+&__item :nth-of-type(odd) {
+    @include font(Cera, Medium, 500, 20px, 16px);
+        color: #3d3d3d;
+
+    &:hover {
+            color: #46a358;
+        }
+    }
+}
+
+.register {
+    margin-bottom: 36px;
+
+&__help {
+    @include font(Cera, Regular, 400, 13px, 16px);
+    }
+
+&__form {
+        margin-top: 14px;
+    @include flex(column, center);
+    }
+
+&__inputs {
+    @include flex(column);
+        gap: 16px;
+        margin-bottom: 41px;
+    }
+
+&__input {
+        width: 100%;
+        padding: 12px 0px 12px 14px;
+        border-radius: 5px;
+        border: 1px solid #eaeaea;
+    }
+
+&__button {
+        cursor: pointer;
+    @include font(Cera, Bold, 700);
+        background-color: #46a358;
+        color: #fff;
+        padding: 13px 0;
+        border-radius: 5px;
+    }
+}
+
+.register-with {
+&__title {
+@include flex(row, center, center);
+    gap: 6px;
+    margin-bottom: 27px;
+
+& > span {
+        margin: 0px 6px;
+    }
+
+& > div {
+        height: 2px;
+        flex: 1;
+        background-color: #eaeaea;
+    }
+}
+
+}
+
+.button-group {
+@include flex(column, center);
+    gap: 6px;
+
+&__button {
+        cursor: pointer;
+    @include flex(row, center, center);
+        gap: 2%;
+        width: 100%;
+        padding: 12px 0px 12px 14px;
+        border-radius: 5px;
+        border: 1px solid #eaeaea;
+        background-color: transparent;
+    }
+}
