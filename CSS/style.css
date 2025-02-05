@@ -42,7 +42,6 @@ blockquote ::before,
 blockquote ::after,
 q ::before,
 q ::after {
-    content: "";
     content: none;
 }
 
@@ -168,7 +167,7 @@ table {
 .shop .categoriesNav {
     display: flex;
     flex-direction: column;
-    padding: 14px 0px 0px 18px;
+    padding: 14px 0 0 18px;
     font-family: "Cera Pro Bold";
 }
 .shop .categoriesNav .headline {
@@ -241,7 +240,7 @@ table {
     cursor: pointer;
 }
 .shop .productNav .sortSelector span {
-    padding: 0px 5px 0px 8px;
+    padding: 0 5px 0 8px;
     font-family: "Cera Pro Regular";
     font-weight: 400;
     font-size: 16px;

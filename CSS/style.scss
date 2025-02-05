@@ -94,7 +94,6 @@ q {
     ::before,
     ::after {
         content: '';
-        content: none;
     }
 }
 
@@ -211,7 +210,7 @@ table {
 
         &Nav {
             @include flex(column);
-            padding: 14px 0px 0px 18px;
+            padding: 14px 0 0 18px;
             @include font(Bold);
 
             .headline {
@@ -290,7 +289,7 @@ table {
                     cursor: pointer;
 
                     span {
-                        padding: 0px 5px 0px 8px;
+                        padding: 0 5px 0 8px;
                         @include font(Regular, 400, 16px);
                     }
 
