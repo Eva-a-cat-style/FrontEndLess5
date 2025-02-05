@@ -34,9 +34,9 @@
             format('truetype');
         } @else if $face == Icons {
             font-family: 'icons-pack';
-            src: url('../Fonts/icons/icons-pack.ttf') format('truetype'),
-                url('../Fonts/icons/icons-pack.woff') format('woff'),
-                url('../Fonts/icons/icons-pack.woff2') format('woff2');
+            src: url('../fonts/icons/icons-pack.ttf') format('truetype'),
+                url('../fonts/icons/icons-pack.woff') format('woff'),
+                url('../fonts/icons/icons-pack.woff2') format('woff2');
         }
     }
 }
@@ -253,6 +253,7 @@ body {
         background-color: #eaeaea;
     }
 }
+
 }
 
 .button-group {
