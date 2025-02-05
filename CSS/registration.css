@@ -16,15 +16,15 @@
 }
 @font-face {
     font-family: "Encode Sans Expanded Light";
-    src: url("../fonts/EncodeSansExpanded/EncodeSansExpanded-Light.ttf") format("truetype");
+    src: url("../Fonts/EncodeSansExpanded/EncodeSansExpanded-Light.ttf") format("truetype");
 }
 @font-face {
     font-family: "Encode Sans Expanded Medium";
-    src: url("../fonts/EncodeSansExpanded/EncodeSansExpanded-Medium.ttf") format("truetype");
+    src: url("../Fonts/EncodeSansExpanded/EncodeSansExpanded-Medium.ttf") format("truetype");
 }
 @font-face {
     font-family: "icons-pack";
-    src: url("../fonts/icons/icons-pack.ttf") format("truetype"), url("../fonts/icons/icons-pack.woff") format("woff"), url("../fonts/icons/icons-pack.woff2") format("woff2");
+    src: url("../Fonts/icons/icons-pack.ttf") format("truetype"), url("../Fonts/icons/icons-pack.woff") format("woff"), url("../Fonts/icons/icons-pack.woff2") format("woff2");
 }
 * {
     margin: 0;
